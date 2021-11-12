@@ -35,6 +35,7 @@ function Detail(props) {
   let [스위치, 스위치변경] = useState(false);
 
 
+
   let 재고 = useContext(재고context);
 
   useEffect(()=>{
@@ -44,12 +45,44 @@ function Detail(props) {
     return ()=>{ clearTimeout(타이머) }
   }, []);
 
-
+  
 
 
 
   let { id } = useParams();
   let history = useHistory();
+
+
+
+
+
+  // DB없이 데이터 저장하려고 localStorage 2
+  useEffect(() => {
+    let arr = localStorage.getItem('watched');
+    if( arr == null) { arr = [] } else { arr = JSON.parse(arr) }
+
+
+
+    arr.push(id);
+    arr = new Set(arr);
+    arr = [...arr];
+
+    localStorage.setItem('watched', JSON.stringify(arr) );
+    
+  }, []);
+
+  // 1. 누가 Detail페이지 들어가면
+  // 2. localStorage에 있는 항목을 꺼냄
+  // 3. 경우가 두가지가 있겠네 null이 나오거나 [] 가 나오거나
+
+  // 4. []가 나오면 거기에 URL파라미터의 id부분을 push()함 (추가함)
+  // 5. 중복 처리하기
+
+  // 6. 그러면 [] 를 다시 localStorage에 저장함 (따옴표쳐서)
+
+
+
+
   let 찾은상품 = props.shoes.find(function (상품) {
     return 상품.id == id;
   });

@@ -5,7 +5,7 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 
 
 function Cart(props) {
-
+    
     let state = useSelector((state) => state);
     let dispatch = useDispatch();
 
