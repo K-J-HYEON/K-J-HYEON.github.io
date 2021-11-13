@@ -18,13 +18,6 @@ let 제목 = styled.h4`
   color: ${(props) => props.색상};
 `;
 
-// class Detail2 extends React.Component {
-//   componentDidMount() {
-//   }
-//   componentWillUnmount() {
-//   }
-// }
-
 function Detail(props) {
   let [alert, alert변경] = useState(true);
   let [inputData, inputData변경] = useState("");
