@@ -40,6 +40,10 @@ function Detail(props) {
   let { id } = useParams();
   let history = useHistory();
 
+
+
+
+  
   // DB없이 데이터 저장하려고 localStorage 2
   useEffect(() => {
     let arr = localStorage.getItem("watched");
