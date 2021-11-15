@@ -90,12 +90,4 @@ let Child2 = memo(function () {
   return <div>2222</div>;
 });
 
-// function state를props화(state){
-//     console.log(state);
-//     return {
-//         state : state.reducer,
-//         alert열렸니 : state.reducer2
-//     }
-// }
-// export default connect(state를props화)(Cart)
 export default Cart;
