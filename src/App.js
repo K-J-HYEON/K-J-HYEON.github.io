@@ -80,12 +80,11 @@ function App() {
                 axios
                   .get("https://codingapple1.github.io/shop/data2.json")
                   .then((result) => {
-                    // 로딩중이라는 UI 안보이게처리
+
                     console.log(result.data);
                     shoes변경([...shoes, ...result.data]);
                   })
                   .catch(() => {
-                    // 로딩중이라는 UI 안보이게처리
                     console.log("실패했어요");
                   });
               }}
