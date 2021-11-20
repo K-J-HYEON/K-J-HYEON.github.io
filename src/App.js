@@ -4,7 +4,6 @@ import "./App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import React, { useContext, useState, lazy, Suspense } from "react";
 import Data from "./data.js";
-// import Detail from "./Detail.js";
 let Detail = lazy(() => import("./Detail.js"));
 
 import axios from "axios";
@@ -75,12 +74,10 @@ function App() {
               className="btn btn-primary"
               onClick={() => {
                 axios.post("서버URL", { id: "codingapple", pw: 1234 }).then();
-                // 로딩중이라는 UI 띄움
 
                 axios
                   .get("https://codingapple1.github.io/shop/data2.json")
                   .then((result) => {
-
                     console.log(result.data);
                     shoes변경([...shoes, ...result.data]);
                   })
