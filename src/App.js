@@ -39,8 +39,6 @@ function App() {
         <br />
       </>
 
-      {/* {name2} */}
-
       <Switch>
         <Route exact path="/">
           <div className="jumbotron">
