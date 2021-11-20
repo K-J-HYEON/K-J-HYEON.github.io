@@ -9,7 +9,7 @@ let Detail = lazy(() => import("./Detail.js"));
 import axios from "axios";
 import { Link, Route, Switch, useHistory } from "react-router-dom";
 
-import { connect } from "react-redux";
+// import { connect } from "react-redux";/
 
 import Cart from "./Cart.js";
 
