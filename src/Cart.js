@@ -49,7 +49,7 @@ function Cart(props) {
       {props.alert열렸니 === true ? (
         <div className="my-alert2">
           <p>
-            지금 구매? 신규 20% 할인
+            지금 구매? 신규 20% 할인해줌 진짜
             <button
               className="close"
               onClick={() => {
@@ -77,14 +77,14 @@ function Parent(props) {
 
 function Child1(props) {
   useEffect(() => {
-    console.log("렌더링됨1");
+    console.log("렌더링됐다이1");
   });
   return <div>1111</div>;
 }
 
 let Child2 = memo(function () {
   useEffect(() => {
-    console.log("렌더링됨2");
+    console.log("렌더링됐다이2");
   });
   return <div>2222</div>;
 });

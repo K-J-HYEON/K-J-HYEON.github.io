@@ -82,7 +82,7 @@ function App() {
                     shoes변경([...shoes, ...result.data]);
                   })
                   .catch(() => {
-                    console.log("실패했어요");
+                    console.log("실패했네...");
                   });
               }}
             >
@@ -93,7 +93,7 @@ function App() {
 
         <Route path="/detail/:id">
           <재고context.Provider value={재고}>
-            <Suspense fallback={<div>로딩중이에요</div>}>
+            <Suspense fallback={<div>로딩즁,,,</div>}>
               <Detail shoes={shoes} 재고={재고} 재고변경={재고변경} />
             </Suspense>
           </재고context.Provider>
@@ -104,7 +104,7 @@ function App() {
         </Route>
 
         <Route path="/:id">
-          <div>아무거나적었을때 이거 보여주셈</div>
+          <div>여백의 미</div>
           {/* <Detail shoes={shoes} /> */}
         </Route>
       </Switch>
