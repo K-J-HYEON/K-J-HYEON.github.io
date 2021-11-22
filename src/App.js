@@ -1,5 +1,4 @@
 /* eslint-disable */
-import logo from "./logo.svg";
 import "./App.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import React, { useContext, useState, lazy, Suspense } from "react";
@@ -9,7 +8,6 @@ let Detail = lazy(() => import("./Detail.js"));
 import axios from "axios";
 import { Link, Route, Switch, useHistory } from "react-router-dom";
 
-// import { connect } from "react-redux";/
 
 import Cart from "./Cart.js";
 
